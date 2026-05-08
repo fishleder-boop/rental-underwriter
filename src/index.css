@@ -1,0 +1,72 @@
+/* INDILA brand. Font stack mirrors the live site.
+ *
+ *  Display:  Jost (Google Fonts' Futura revival). The live site uses
+ *            'futura-lt-w01-light' from Adobe Fonts, which has no free
+ *            equivalent; Jost at weight 300 is the closest public match.
+ *  Body:     Helvetica Neue / Helvetica. Same family the live site uses
+ *            for paragraphs. System-resolved where available, Inter as a
+ *            defensive fallback for Windows / Linux without Helvetica.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Inter', Arial, sans-serif;
+  color: #1A2333;
+  background: #FAF7F0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Display type. Jost used for all large display headlines.
+   Weight 300 (Light) mirrors the live site's Futura LT Light feel. */
+.display {
+  font-family: 'Jost', 'Futura', 'Futura PT', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.display-italic {
+  font-family: 'Jost', 'Futura', 'Futura PT', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: -0.015em;
+}
+
+/* Wordmark. Heavy, tight-tracked-loose like the real logo (Arial Black, 0.1em tracking). */
+.wordmark {
+  font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* Small uppercase labels. */
+.eyebrow {
+  font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+::selection {
+  background: #15355B;
+  color: #FAF7F0;
+}
